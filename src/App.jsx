@@ -1,5 +1,6 @@
 import { useStore } from './store';
 import CommandSidebar from './components/CommandSidebar'
+import DeptChart from './components/DeptChart';
 
 function App() {
     const managerTheme = useStore((state) => state.managerTheme);
@@ -22,6 +23,8 @@ function App() {
                     <h1>Manager Dashboard</h1>
                     <p>Live Monitoring: <strong>{reportRange}</strong></p>
                 </header>
+
+                <DeptChart />
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
                     {departments.produce && <DeptTile name="Produce" color="#4caf50" status="On Schedule" />}
