@@ -1,6 +1,7 @@
 import { useStore } from './store';
 import CommandSidebar from './components/CommandSidebar'
 import DeptChart from './components/DeptChart';
+import ValueDistributionChart from './components/ValueDistributionChart';
 
 function App() {
     const managerTheme = useStore((state) => state.managerTheme);
@@ -24,7 +25,14 @@ function App() {
                     <p>Live Monitoring: <strong>{reportRange}</strong></p>
                 </header>
 
-                <DeptChart />
+                <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+                    <div style={{ flex: 2, minWidth: '400px' }}>
+                        <DeptChart />
+                        </div>
+                        <div style={{ flex: 1, minWidth: '300px', marginTop: '20px' }}>
+                            <ValueDistributionChart />
+                        </div>
+                </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
                     {departments.produce && <DeptTile name="Produce" color="#4caf50" status="On Schedule" />}

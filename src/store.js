@@ -23,6 +23,12 @@ export const useStore = create
                 { time: '14:00', produce: 278, dairy: 390, bakery: 200, frozen: 120 },
                 { time: '16:00', produce: 189, dairy: 480, bakery: 181, frozen: 200 },
             ],
+            distributionData: [
+                { name: 'Produce', value: 4500, color: '#4caf50' },
+                { name: 'Dairy', value: 3200, color: '#2196f3' },
+                { name: 'Bakery', value: 2100, color: '#ff9800' },
+                { name: 'Frozen', value: 1800, color: '#00bcd4' },
+            ],
 
             // Actions
             toggleManagerTheme: () => set((state) => ({
