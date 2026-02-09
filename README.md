@@ -24,7 +24,7 @@ By using Zustand selectors, I learned how to ensure components only re-render wh
 ### 3. Middleware & Persistence
 I implemented the persist middleware to link volatile memory and permanent storage. This taught me how to handle hydration, and ensure the app loads correctly loads the settings correctly when first loading.
 
-### 4. COordinated Visualisations
+### 4. Coordinated Visualisations
 Integrating Recharts taught me how to filter global datasets in real-time. I implemented logic where toggling a department hides the UI card and filters the data used in the line and pie charts.
 
 ## Local Setup
