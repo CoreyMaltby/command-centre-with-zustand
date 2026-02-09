@@ -5,7 +5,7 @@ export const useStore = create
     (persist(
         (set) => ({
             // Initial state
-            theme = 'light',
+            theme: 'light',
             reportRange: 'Today',
             // Tracks which department pannels are open
             departments: {
