@@ -9,7 +9,7 @@ function App() {
     const dashboardStyle = {
         display: 'flex',
         minHeight: '100vh',
-        backgroundColour: managerTheme === 'light' ? '#fff' : '#333',
+        backgroundColor: managerTheme === 'light' ? '#fff' : '#333',
         color: managerTheme === 'light' ? '#000' : '#fff',
         transition: ' all 0.3s ease',
     };
