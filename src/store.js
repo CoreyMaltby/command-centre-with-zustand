@@ -5,14 +5,14 @@ export const useStore = create
     (persist(
         (set) => ({
             // Initial state
-            theme: 'light',
+            managerTheme: 'light',
             reportRange: 'Today',
             // Tracks which department pannels are open
             departments: {
                 produce: true,
-                diary: true,
-                bakery: true,
-                frozen: true,
+                dairy: true,
+                bakery: false,
+                frozen: false,
             },
 
             // Actions
@@ -23,18 +23,18 @@ export const useStore = create
             setReportRange: (range) => set({ reportRange: range }),
 
             // Toggle the visibility of a department pannel
-            toggleDepartment: (department) => set((state) => ({
+            toggleDepartment: (departmentName) => set((state) => ({
                 departments: {
                     ...state.departments,
                     [departmentName]: !state.departments[departmentName],
                 },
             })),
             resetLayout: () => set({
-                theme: 'light',
+                managerTheme: 'light',
                 reportRange: 'Today',
                 departments: {
                     produce: true,
-                    diary: true,
+                    dairy: true,
                     bakery: false,
                     frozen: false,
                 }
